@@ -1,49 +1,162 @@
-body {
-    font-family: Arial, sans-serif;
+/* Basic Reset */
+body, h1, h2, h3, p, ul, li, table, td {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
 header {
     background-color: #EDE4CB;
-    color: #fff;
 }
 
-nav ul {
-    list-style: none;
-    padding-right: 10%;
-    padding-bottom: 2%;
+/* Navigation styling */
+nav {
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: #fff;
+    background-color: #EDE4CB; /* Ensure the background color matches the header */
 }
 
-nav ul li {
-    margin: 0 1%;
+.logo img {
+    width: 150px; /* Adjust as needed */
+    height: auto;
 }
 
-nav ul li a {
+/* Navigation links styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
     color: #000;
     text-decoration: none;
-    font-size: 120%;
+    padding: 0.5rem 1rem;
+    display: block;
+    font-size: 1rem; /* Base font size */
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+.nav-links a.active, .nav-links a:hover {
+    background-color: #555;
+    color: #fff;
+    border-radius: 4px;
 }
 
+/* Main content styling */
 main {
+    padding: 20px;
     text-align: center;
-    padding: 20px; 
 }
 
-img {
+.main-image {
+    max-width: 80%;
+    height: auto;
+}
+
+.image-container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.image-container img, .main-image, .product-table img {
     max-width: 100%;
     height: auto;
 }
 
-table td {
-    list-style: none;
-    padding-right: 1%;
-    padding-bottom: 1%;
+/* Table styling */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.product-table td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+}
+
+footer img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo img {
+        width: 120px; /* Adjust size for mobile */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none; /* Hide links by default */
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when activated */
+    }
+
+    .nav-links a {
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+        font-size: 0.875rem; /* Smaller font size for mobile */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .product-table td {
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+
+    .product-table img {
+        width: 100%; /* Ensure images fit within their cells */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links a {
+        font-size: 0.75rem; /* Further reduce font size for very small screens */
+    }
+
+    .logo img {
+        width: 100px; /* Further reduce logo size */
+    }
+
+    .product-table td {
+        padding: 3px; /* Further reduce padding for very small screens */
+    }
+
+    .product-table img {
+        width: 100%; /* Ensure images are responsive */
+    }
 }

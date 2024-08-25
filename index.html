@@ -2,26 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="images/kadran-logo.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
+    <title>Kadran Milk</title>
 </head>
 <body>
     <header>
         <nav>
-            <img src="images/kadran-logo.png" style="padding-top: 2%;" width="10%" height="5%">
-            <ul>
-                <li><a href="index.html" avtive>Home</a></li>
+            <div class="logo">
+                <img src="images/kadran-logo.png" alt="Kadran Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="products.html">Products</a></li>
-                <li><a href="info.html">More info</a></li>
+                <li><a href="info.html">About</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <img src="images/Kadran Brochure_page-0003.jpg" width="80%" height="80%">
+        <img src="images/Kadran Brochure_page-0003.jpg" alt="Brochure" class="main-image">
     </main>
     <hr>
-    <footer style="text-align: center;">
-        <img src="images/contact.jpg">
+    <footer>
+        <img src="images/contact.jpg" alt="Contact">
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
