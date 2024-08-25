@@ -23,7 +23,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    color: #fff;
     background-color: #EDE4CB; /* Ensure the background color matches the header */
 }
 
@@ -63,31 +62,9 @@ main {
     text-align: center;
 }
 
-.main-image {
-    max-width: 80%;
-    height: auto;
-}
-
-.image-container {
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-.image-container img, .main-image, .product-table img {
+.main-image, .image-container img, .product-table img {
     max-width: 100%;
     height: auto;
-}
-
-/* Table styling */
-.product-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0 auto;
-}
-
-.product-table td {
-    padding: 10px;
-    text-align: center;
 }
 
 /* Footer styling */
@@ -105,7 +82,7 @@ footer img {
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .logo img {
@@ -114,49 +91,28 @@ footer img {
 
     .nav-links {
         flex-direction: column;
-        align-items: flex-start;
-        display: none; /* Hide links by default */
+        gap: 0;
         width: 100%;
     }
 
-    .nav-links.active {
-        display: flex; /* Show links when activated */
+    .nav-links li {
+        width: 100%;
     }
 
     .nav-links a {
         padding: 1rem;
         width: 100%;
         text-align: center;
-        font-size: 0.875rem; /* Smaller font size for mobile */
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .product-table td {
-        padding: 5px; /* Reduce padding for smaller screens */
-    }
-
-    .product-table img {
-        width: 100%; /* Ensure images fit within their cells */
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .nav-links a {
-        font-size: 0.75rem; /* Further reduce font size for very small screens */
-    }
-
     .logo img {
-        width: 100px; /* Further reduce logo size */
+        width: 100px;
     }
 
-    .product-table td {
-        padding: 3px; /* Further reduce padding for very small screens */
-    }
-
-    .product-table img {
-        width: 100%; /* Ensure images are responsive */
+    .nav-links a {
+        font-size: 0.875rem;
     }
 }
